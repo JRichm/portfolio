@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/00827ff9ca.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./index.css">
+    <title>James Richmond</title>
+</head>
+<body>
+    <div class="scroll-container">
+        <section class="name-card">
+            <nav>
+                <a href="">Projects</a>
+                <a href="">About</a>
+                <a href="">Contact</a>
+            </nav>
+            <span class="main-area">
+                <div class="name-area">
+                    <h1>James Richmond</h1>
+                    <p>Software Developer</p>
+                    <button class="btn about-me">About Me</button>
+                </div>
+                <div class="link-list">
+                    <a href="https://www.linkedin.com/in/james-richmond-527b00266/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/JRichm" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </span>
+            <button class="btn works">Works</i></button>
+        </section>
+        <section class="project-card">
+            <p>Projects</p>
+        </section>
+        <section class="about-card">
+            <p>about</p>
+        </section>
+        <section class="contact-card">
+            <div class='social-div'>
+                <article>
+                    <h2>Send me a message!</h2>
+                    <p>jblackenmusic@gmail.com</p>
+                </article>
+                <article>
+                    <div class="contact-link-list">
+                        <a href="https://www.linkedin.com/in/james-richmond-527b00266/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/JRichm" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </article>
+            </div>
+            <form class="contact-form">
+                <input type="text" placeholder="Full Name">
+                <input type="text" placeholder="Email">
+                <input type="text" placeholder="Message" style="height: 75px;">
+                <button class="contact-us-button">Send Message</button>
+            </form>
+        </section>
+    </div>
+    <script>
+        const scrollContainer = document.querySelector('.scroll-container');
+        let isScrolling = false;
+
+        scrollContainer.addEventListener('scroll', () => {
+        clearTimeout(isScrolling);
+        isScrolling = setTimeout(() => {
+            const scrollTop = scrollContainer.scrollTop;
+            const sectionHeight = scrollContainer.clientHeight;
+            const currentSection = Math.round(scrollTop / sectionHeight);
+            scrollContainer.scrollTo({
+                top: currentSection * sectionHeight,
+                behavior: 'smooth'
+                });
+            }, 100);
+        });
+    </script>
+</body>
+</html>
+
+
