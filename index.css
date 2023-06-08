@@ -3,14 +3,11 @@ body {
 }
 
 .scroll-container {
-    scroll-snap-type: y mandatory;
     overflow-y: scroll;
     height: 100vh;
 }
 
 .scroll-container {
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
     height: 100vh;
     scrollbar-width: none; /* Hide the scrollbar for Firefox */
     -ms-overflow-style: none; /* Hide the scrollbar for IE and Edge */
@@ -23,7 +20,6 @@ body {
 body section {
     height: 100vh;
     width: 100vw;
-    scroll-snap-align: start;
 }
 
 
